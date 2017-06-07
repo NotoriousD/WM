@@ -1,0 +1,282 @@
+@import "bourbon/bourbon"
+
+body
+	font-family: "RobotoLight", sans-serif
+	font-weight: normal
+	font-size: 14px
+	min-width: 320px
+	position: relative
+	line-height: 1.42857
+	-webkit-font-smoothing: antialised
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: red
+body input:required:valid,
+body textarea:required:valid
+	color: green
+
+.hidden
+	display: none
+
+.toggle_mnu
+	width: 60px
+	height: 60px
+	position: fixed
+	z-index: 100
+	border: none
+	background: rgba(0, 0, 0, .4)
+	span
+		display: block
+
+
+$w: 28px
+$h: 3px
+
+.sandwich
+	width: $w
+	height: $w
+	position: absolute
+	top: 8px
+	bottom: 0
+	left: 0
+	right: 0
+	margin: auto
+	z-index: 200
+
+.sw-topper
+	position: relative
+	top: 0
+	width: $w
+	height: $h
+	background: rgb(255, 255, 255)
+	border: none
+	border-radius: 4px 4px 4px 4px
+	transition: transform 0.5s, top 0.2s
+	display: block
+
+	//transition-delay: 0.2s, 0s
+.sw-bottom
+	position: relative
+	width: $w
+	height: $h
+	top: $h * 2.2
+	background: rgb(255, 255, 255)
+	border: none
+	border-radius: 4px 4px 4px 4px
+	transition: transform 0.5s, top 0.2s
+	transition-delay: 0.2s, 0s
+.sw-footer
+	position: relative
+	width: $w
+	height: $h
+	top: $h * 4.5
+	background: rgb(255, 255, 255)
+	border: none
+	border-radius: 4px 4px 4px 4px
+	transition: all 0.5s
+	transition-delay: 0.1s
+.sandwich.active
+	.sw-topper
+		top: 9px
+		transform: rotate(-45deg)
+	.sw-bottom
+		top: 6px
+		transform: rotate(45deg)
+	.sw-footer
+		opacity: 0
+		top: 0
+		transform: rotate(180deg)
+
+a
+	color: #435993
+	&:hover
+		color: #000
+		text-decoration: none
+
+header
+	border-bottom: 1px solid #d9d9d9
+
+.inner
+	max-width: 768px
+	margin: 0 auto
+	height: 100%
+
+
+
+/*          BLOCK HEADER         */
+
+
+
+.block_mnu
+	ul,
+	li
+		list-style-type: none
+		padding: 0
+		border: 0
+
+.top_mnu
+	height: 50px
+	text-align: center
+	li
+		display: inline-block
+		line-height: 50px
+		text-align: center
+		margin-right: 90px
+		a
+			display: block
+
+
+
+/*          BLOCK HEAD-TEXT          */
+
+
+.h_top
+	font-size: 70px
+	text-align: center
+	font-weight: 400
+	margin-top: 160px
+	color: #1c1c1c
+
+
+
+/*          BLOCK MY INFO          */
+
+
+
+.block_img-info
+	background-image: url(../../img/book.png)
+	background-repeat: no-repeat
+	background-position: center center
+	width: 50px
+	height: 50px
+	margin: 0 auto
+
+.section_container
+	margin-bottom: 25px
+	h2
+		font-size: 30px
+		text-align: center
+		font-weight: 400
+
+.my_info
+	form
+		input
+			color: #c8c8c8
+			display: block
+			border: 1px solid #e5e5e5
+			border-radius: 3px
+			padding: 19px 174px 19px 174px
+			text-align: center
+			margin: 0 auto
+			font-size: 24px
+			margin-bottom: 25px
+		select
+			color: #c8c8c8
+			display: block
+			border: 1px solid #e5e5e5
+			border-radius: 3px
+			padding: 19px 174px 19px 174px
+			text-align: center
+			margin: 0 auto
+			font-size: 24px
+			margin-bottom: 25px
+			option
+				text-align: center
+
+
+
+
+/*          BLOCK MY STAGE          */
+
+
+
+.block_img-stage
+	background-image: url(../../img/list.png)
+	background-repeat: no-repeat
+	background-position: center center
+	width: 50px
+	height: 50px
+	margin: 0 auto
+
+.form_wrap
+	input
+		width: 20px
+		height: 20px
+		border: 1px solid #435993
+		margin-right: 5px
+		vertical-align: middle
+		background-color: #fff
+
+.block_img-js
+	background-image: url(../../img/js.png)
+	background-repeat: no-repeat
+	background-position: center center
+	width: 50px
+	height: 50px
+	margin: 0 auto
+
+.value_s
+	margin-top: 25px
+	p
+		&:before
+			content: ''
+			width: 2px
+			height: 7px
+			border-right: 1px dashed #000
+			position: absolute
+			left: 40%
+			top: 0
+
+
+.ui-widget.ui-widget-content
+	width: 90%
+	margin: 0 auto
+	background: linear-gradient(to right, rgba(191,166,230,1) 0%, rgba(140,136,199,1) 100%)
+
+
+
+
+/*          BLOCK ABOUT ME          */
+
+
+
+.block_img-me
+	background-image: url(../../img/description.png)
+	background-repeat: no-repeat
+	background-position: center center
+	width: 50px
+	height: 50px
+	margin: 0 auto
+
+.about_me
+	p
+		text-align: center
+		width: 58%
+		margin: 0 auto
+		position: relative
+	textarea
+		width: 100%
+		height: 180px
+		border-radius: 4px
+		border: 1px solid #e5e5e5
+		font-size: 20px
+		color: #c8c8c8
+
+.about_text
+	margin: 0 auto
+	width: 520px
+	margin-top: 30px
+
+.btn
+	width: 115px
+	height: 50px
+	border-radius: 9px
+	background-color: #435993
+	margin: 0 auto
+	color: #fff
+	border: 0
+	font-size: 16px
+	margin-left: 40%
+	margin-top: 70px
+	margin-bottom: 35px
